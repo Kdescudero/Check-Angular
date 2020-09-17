@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
+  <div *ngFor="let item of array">
+    <label>
+      <input
+        type="checkbox"
+        [value]="item.idsesiones"
+        (change)="_onCheckboxChange($event)"
+      />
+      {{item.nombre}}
+    </label>
+  </div>
+  <input type="submit" value="Submit" />
+</form>
